@@ -32,8 +32,8 @@ spec:
           container('build') {
             dir('charts') {
               withCredentials([usernamePassword(credentialsId: 'nexuslogin', usernameVariable: 'username', passwordVariable: 'password')]) {
-              sh '/usr/local/bin/helm package micro-services-utils'
-              sh 'curl -v -u $username:$password --upload-file micro-services-utils-1.0.tgz http://nexus.k4m.in/repository/sock-shop-helm-local/'
+              sh '/usr/local/bin/helm package micro-service-utils'
+              sh 'curl -v -u $username:$password --upload-file micro-service-utils-1.0.tgz http://nexus.k4m.in/repository/sock-shop-helm-local/'
               }
             }
           }
