@@ -15,7 +15,7 @@ spec:
     - cat
     tty: true
   - name: docker
-    image: docker:24.0.0-rc.1-dind
+    image: docker:latest
     securityContext:
       privileged: true
 '''
